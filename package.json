@@ -1,0 +1,19 @@
+{
+  "name": "licit",
+  "version": "1.0.0",
+  "description": "Legal Aid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demiladebamgbose/Licit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demiladebamgbose/Licit/issues"
+  },
+  "homepage": "https://github.com/demiladebamgbose/Licit#readme"
+}

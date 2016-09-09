@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 0.10.22
+    version: 6.5.0
 dependencies:
   override:
     - npm install --dev

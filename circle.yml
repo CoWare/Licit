@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 6.5.0
+dependencies:
+    - npm install
+    - npm install -g jasmine
+test:
+    - npm test

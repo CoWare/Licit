@@ -2,5 +2,7 @@ machine:
   node:
     version: 6.5.0
 dependencies:
-  override:
-    - npm install --dev
+    - npm install
+    - npm install -g jasmine
+test:
+    - npm test

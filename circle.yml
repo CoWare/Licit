@@ -1,3 +1,6 @@
 machine:
   node:
     version: 6.5.0
+test:
+  pre:
+    - npm install -g jasmine

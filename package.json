@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/CoWare/Licit/issues"
   },
-  "homepage": "https://github.com/CoWare/Licit#readme"
+  "homepage": "https://github.com/CoWare/Licit#readme",
+  "dependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.0.2"
+  }
 }

@@ -3,5 +3,5 @@ machine:
     version: 6.5.0
 test:
   pre:
-    - npm install mocha --save-dev
-    - npm install expect.js --save-dev
+    - npm install mocha
+    - npm install expect.js

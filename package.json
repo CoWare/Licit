@@ -1,0 +1,23 @@
+{
+  "name": "licit",
+  "version": "1.0.0",
+  "description": "Legal Aid",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoWare/Licit.git"
+  },
+  "author": "CoWare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CoWare/Licit/issues"
+  },
+  "homepage": "https://github.com/CoWare/Licit#readme",
+  "dependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.0.2"
+  }
+}

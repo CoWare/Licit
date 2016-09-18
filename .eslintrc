@@ -1,0 +1,16 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "node": true
+  },
+
+  "rules": {
+    "strict" : "error",
+    "no-const-assign": "error",
+    "no-unused-vars": "error",
+    "no-redeclare": "error",
+    "no-fallthrough": "error",
+    "no-console": "off",
+    "no-obj-calls": "off"
+  }
+}

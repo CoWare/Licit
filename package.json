@@ -4,14 +4,14 @@
   "description": "Legal Aid",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CoWare/Licit.git"
   },
-  "author": "coWare",
-  "license": "ISC",
+  "author": "CoWare",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CoWare/Licit/issues"
   },

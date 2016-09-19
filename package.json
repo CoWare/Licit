@@ -4,7 +4,9 @@
   "description": "Legal Aid",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cover": "rm -rf ./coverage && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -16,8 +18,12 @@
     "url": "https://github.com/CoWare/Licit/issues"
   },
   "homepage": "https://github.com/CoWare/Licit#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.11.13",
     "expect.js": "^0.3.1",
-    "mocha": "^3.0.2"
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2",
+    "mocha-lcov-reporter": "^1.2.0"
   }
 }

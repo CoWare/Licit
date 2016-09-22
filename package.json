@@ -4,21 +4,32 @@
   "description": "Legal Aid",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine",
-    "lint": "gulp eslint"
+    "lint": "gulp eslint",
+    "test": "mocha",
+    "cover": "rm -rf ./coverage && istanbul cover _mocha --report lcovonly -- -R spec",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CoWare/Licit.git"
   },
-  "author": "coWare",
-  "license": "ISC",
+  "author": "CoWare",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CoWare/Licit/issues"
   },
   "homepage": "https://github.com/CoWare/Licit#readme",
+  "dependencies": {},
   "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "coveralls": "^2.11.13",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "expect.js": "^0.3.1",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1"
+    "gulp-eslint": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2",
+    "mocha-lcov-reporter": "^1.2.0"
   }
 }

@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 6.5.0
+test:
+  post:
+    - npm run cover
+    - npm run coveralls
+ 

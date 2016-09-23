@@ -10,6 +10,10 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "commitmsg": "node commitValidator.js commit && npm run lint"
   },
+  "pre-commit": [
+    "commitmsg"
+  ],
+  "precommit.silent": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CoWare/Licit.git"
@@ -23,7 +27,8 @@
   "dependencies": {
     "child_process": "^1.0.2",
     "fs": "0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "util": "^0.10.3"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
@@ -36,6 +41,7 @@
     "gulp-eslint": "^3.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
-    "mocha-lcov-reporter": "^1.2.0"
+    "mocha-lcov-reporter": "^1.2.0",
+    "pre-commit": "^1.1.3"
   }
 }

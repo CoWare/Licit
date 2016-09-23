@@ -42,7 +42,8 @@
         "describe": true,
         "document": true,
         "fetch": true,
-        "window": true
+        "window": true,
+        "it": true
     },
     "rules": {
         "strict": "error",

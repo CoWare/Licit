@@ -7,7 +7,8 @@
     "lint": "gulp lint",
     "test": "mocha",
     "cover": "rm -rf ./coverage && istanbul cover _mocha --report lcovonly -- -R spec",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "commitmsg": "node commitValidator.js commit && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,11 @@
     "url": "https://github.com/CoWare/Licit/issues"
   },
   "homepage": "https://github.com/CoWare/Licit#readme",
-  "dependencies": {},
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "coveralls": "^2.11.13",
@@ -29,8 +34,10 @@
     "expect.js": "^0.3.1",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
+    "husky": "^0.11.8",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
-    "mocha-lcov-reporter": "^1.2.0"
+    "mocha-lcov-reporter": "^1.2.0",
+    "pre-commit": "^1.1.3"
   }
 }

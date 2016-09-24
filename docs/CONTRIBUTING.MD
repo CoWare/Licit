@@ -28,6 +28,7 @@ We follow standard commit pattern for the project. All commit messages must foll
 ## Pull Requests
 
 Once you are done with a ticket, open a PR against **develop** branch and ensure that your build process passes on CI.
+Always provide succificient description of the task when opening a PR for easy review
 
 ## How to Create an issue
 We use github issues to track issues on the project.

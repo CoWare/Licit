@@ -7,7 +7,8 @@ The purpose of this document is to outline the rules that would act as guides fo
   - Using the format `closes #issueNo | Short description` when opening a PR automatically moves the card to `code review` column and it can be that simple.
 
 
-  - Two branches `release` branch and `develop` have been created, all pull requests should be submitted to the develop branch **only**.
+  - Two branches `release` branch and `develop` have been created along side `master`, all pull requests should be submitted to the develop branch **only**.
   
+  - For all commits, the commit message should follow the style `git commit -m "issue #issueNo | Short description"`.
 
 **The waffle git work flow is documented [here](https://github.com/waffleio/waffle.io/wiki/FAQs#note-to-gitflow-users)**

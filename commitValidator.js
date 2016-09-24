@@ -30,9 +30,9 @@ const validateBranchName = () => {
 
     if (!~branchName.indexOf('/')) {
         console.log(`\u001b[31mInvalid branch naming convention\u001b[35m
-          USAGE: fix/#ISSUE_ID/brief_description
-                 chore/#ISSUE_ID/brief_description
-                 feature/#ISSUE_ID/brief_description, 😂.`);
+            USAGE: fix/#ISSUE_ID/brief_description
+                   chore/#ISSUE_ID/brief_description
+                   feature/#ISSUE_ID/brief_description, 😂.`);
         return false;
     }
 
@@ -52,7 +52,7 @@ const validateBranchName = () => {
         return false;
     } else if (branchName.indexOf('/#') < 0) {
         console.log(`\u001b[31mInvalid branch name!\u001b[35m
-         USAGE: ${branchNames[0]}`);
+            USAGE: ${branchNames[0]}`);
         return false;
     }
     console.log(`\u001b[31mFollow the right convention!\u001b[35m
@@ -71,7 +71,7 @@ const validateCommitMessage = (msg) => {
         return false;
     } else if (!(~message.indexOf('|') || ~message.indexOf(' | '))) {
         console.log(`\u001b[31mRemember to follow convention\u001b[35m
-          USAGE: [${commitMessageFormat}]. Missing pipe or space in-between 😂.`);
+            USAGE: [${commitMessageFormat}]. Missing pipe or space in-between 😂.`);
         return false;
     }
     const messageID = message.split(' | ')[0].replace('issue #', '');

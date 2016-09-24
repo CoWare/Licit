@@ -6,5 +6,3 @@ gulp.task('lint', () => {
     .pipe( eslint({configFile: '.eslintrc'}) )
     .pipe(eslint.format());
 });
-
-// gulp.task('pre-commit', ['lint'])

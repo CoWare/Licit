@@ -23,13 +23,16 @@ const validateBranchName = () => {
     const issueType = branchName.split('/')[0];
     const issueTypes = branchNames.map(branch => branch.split('/')[0]);
 
-    if (!~protectedBranches.indexOf(branchName)) {
-        console.log(`\u001b[42m Perfect Branch\u001b[49m 💪.`);
+    if (~protectedBranches.indexOf(branchName)) {
+        console.log(`\u001b[42m You are on [Develop, Master, or Release branch]\u001b[49m 💪.`);
         return true;
     }
 
-    if (branchName.indexOf('/') <= 0) {
-        console.log(`\u001b[31mInvalid branching convention\u001b[35m 😂.`);
+    if (!~branchName.indexOf('/')) {
+        console.log(`\u001b[31mInvalid branch naming convention\u001b[35m
+          USAGE: fix/#ISSUE_ID/brief_description
+                 chore/#ISSUE_ID/brief_description
+                 feature/#ISSUE_ID/brief_description, 😂.`);
         return false;
     }
 
@@ -49,11 +52,11 @@ const validateBranchName = () => {
         return false;
     } else if (branchName.indexOf('/#') < 0) {
         console.log(`\u001b[31mInvalid branch name!\u001b[35m
-         Ex: ${branchNames[0]}`);
+         USAGE: ${branchNames[0]}`);
         return false;
     } else {
         console.log(`\u001b[31mFollow the right convention!\u001b[35m
-          Ex: [${branchName[0]}] 😂.`);
+          USAGE: [${branchName[0]}] 😂.`);
         return false;
     }
 }
@@ -69,7 +72,7 @@ const validateCommitMessage = (msg) => {
         return false;
     } else if (!(~message.indexOf('|') || ~message.indexOf(' | '))) {
         console.log(`\u001b[31mRemember to follow convention\u001b[35m
-          Ex: [${commitMessageFormat}]. Missing pipe or space in-between 😂.`);
+          USAGE: [${commitMessageFormat}]. Missing pipe or space in-between 😂.`);
         return false;
     } else {
         const messageID = message.split(' | ')[0].replace('issue #', '');

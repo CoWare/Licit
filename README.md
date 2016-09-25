@@ -15,7 +15,7 @@ Licit is a well architectured and easy to use application to help you create, ma
    ```bash
    npm install gulp -g
    ```
-4. Install project dependenies
+4. Install project dependencies
 
     ```bash
     npm install

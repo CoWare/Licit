@@ -47,7 +47,7 @@ gulp
 ```
 
 ## Contributing
-Refer to [Contibuting Docuemnent](./docs/CONTRIBUTING.MD) to contribute to this project.
+Refer to [Contributing Document](./docs/CONTRIBUTING.MD) to contribute to this project.
 
 ## Project Management Tools
 Waffle is the project management tool used for this project. Refer to [Waffle Document](./docs/WAFFLE.MD) for details.

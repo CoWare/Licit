@@ -16,7 +16,7 @@ Waffle responds to your normal git commands. Typical use cases are:
 
 1) Move story to **In Progress** column
 
-    Create a branch with the [naming convention]('./docs/CONTRIBUTING.MD') and run `git push.`
+    Create a branch with the [naming convention](./CONTRIBUTING.MD) and run `git push.`
     Always ensure that your avatar is on the issue you are working on.
 
 2) Move story to **Code Review** column

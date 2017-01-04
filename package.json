@@ -8,7 +8,7 @@
     "test": "mocha",
     "cover": "rm -rf ./coverage && istanbul cover _mocha --report lcovonly -- -R spec",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "commitmsg": "node commitValidator.js commit && npm run lint",
+    "commitmsg": "babel-node commitValidator.js commit && npm run lint",
     "start": "babel-node server.js"
   },
   "repository": {

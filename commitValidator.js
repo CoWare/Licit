@@ -1,7 +1,7 @@
+import  Logger from './Logger.js';
 const fs = require('fs');
 const exec = require('child_process').execSync;
 const path = require('path');
-const Logger = require('./Logger');
 
 const protectedBranches = ['master', 'develop', 'release'];
 const branchNames = [

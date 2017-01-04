@@ -8,7 +8,8 @@ const Logger = Tracer.colorConsole({
       error: '[{{timestamp}}] [{{title}}] {{message}} ' +
       '(in [{{file}}]:[{{line}}])\nCall Stack:\n[{{stack}}]'
     }
-  ]
+  ],
+  level:'log'
 });
 
 export default Logger;

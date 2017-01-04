@@ -1,13 +1,41 @@
 # Contribution Guide
 
-The purpose of this document is to outline the rules that would act as guides for our coding and collaboration throughout and possibly beyond the development period for `Licit`. Please feel free to contribute in the structure shown below.
+Follow strictly the instruction below to contribute to the project
 
-  - An issue would be moved to `in progress` and be assigned to you if you reference it in the branch name. Just put the issue number at the beginning of the branch name with a `-` or `_` behind it or anywhere else in the branch name with a '#' in front of it. Below are some example branch names: `123-fix-bug, bug-fix#123 or bug-fix-username/repo#123  (to refernce anissue in another repo).`
+## Contribution Workflow
+Refer to [workflow](https://github.com/waffleio/waffle.io/wiki/Recommended-Workflow-Using-Pull-Requests-&-Automatic-Work-Tracking) for details.
 
-  - Using the format `closes #issueNo | Short description` when opening a PR automatically moves the card to `code review` column and it can be that simple.
+## Branches
+### Protected Branches
+- **master:** Stable production branch.
+- **develop:** Development branch.
+- **release:** Support preparation of new production release.
 
+### Working branches
+Our branches should follow any of the naming conventions depending on the nature of the task:
+```
+Bug => 'fix/#ISSUE_ID/brief_description',
+Chore => 'chore/#ISSUE_ID/brief_description',
+Feature => 'feature/#ISSUE_ID/brief_description'
+```
 
-  - Two branches `release` branch and `develop` have been created, all pull requests should be submitted to the develop branch **only**.
-  
+## Commit
 
-**The waffle git work flow is documented [here](https://github.com/waffleio/waffle.io/wiki/FAQs#note-to-gitflow-users)**
+We follow standard commit pattern for the project. All commit messages must follow the pattern below.
+
+```'issue #ISSUE_ID | brief_description'```
+
+## Pull Requests
+
+Once you are done with a ticket, open a PR against **develop** branch and ensure that your build process passes on CI.
+Always provide succificient description of the task when opening a PR for easy review
+
+## How to Create an issue
+We use github issues to track issues on the project.
+
+Each issue created should have at least the following:
+* Clear description of the **feature**, **bug**, or **chore.**
+* Specific steps to complete the story.
+* Itemized tasks to complete the story.
+* Include screenshots or mockups for visual guide where applicable.
+

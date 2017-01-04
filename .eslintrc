@@ -107,6 +107,7 @@
     "yoda": 1, // require or disallow Yoda conditions
     // Strict Mode
     // These rules relate to using strict mode.
+    "new-cap": ["error", { "properties": false }],
     "strict": [
       2,
       "global"

@@ -15,10 +15,10 @@ docRoute.post('/documents', (req, res, next) => {
 });
 
 docRoute.put('/documents/:did', (req, res, next) => {
-  res.send('edit a document')
+  res.send('edit a document');
 });
 
-docRoute.get('/categories', (req, res,next) => {
+docRoute.get('/categories', (req, res, next) => {
   res.send('get all doc categories');
 });
 

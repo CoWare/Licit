@@ -1,4 +1,5 @@
-import  Logger from './Logger.js';
+import Logger from './Logger.js';
+
 const fs = require('fs');
 const exec = require('child_process').execSync;
 const path = require('path');

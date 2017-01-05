@@ -13,4 +13,4 @@ class Index {
   }
 }
 
-module.exports = Index;
+export default Index;

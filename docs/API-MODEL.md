@@ -1,7 +1,7 @@
 # LICIT API Documentation
 This document contains a description of the HTTP enpoints of the Licit RESTful API. It describes the input data format and what the response of the server would look like.
 
-**Base API Link: api/v1/*endpoint***
+**Base API Link: api/v1/endpoint**
 
 ## Endpoint table
 

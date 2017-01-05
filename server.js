@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import Logger from './Logger.js';
 import 'dotenv/config';
+import Logger from './Logger.js';
 
 /**
  * Import app routes
@@ -25,6 +25,15 @@ app.use('/users', usersRoute);
 app.use('/api', docsRoute);
 
 /**
+ * Handle unknown routes
+ */
+app.use((req, res) => {
+  res.status(404).json({
+    error: 'This page does not exist yet.'
+  });
+});
+
+/**
  * Error handler
  */
 app.use((err, req, res, next) => {
@@ -41,3 +50,5 @@ app.listen(port, (err) => {
   }
   Logger.info(`App started on port ${port}`);
 });
+
+export default app;

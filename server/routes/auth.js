@@ -3,15 +3,15 @@ import express from 'express';
 const auth = express.Router();
 
 auth.post('/signup', (req, res, next) => {
-  res.send('signup');
+  res.send({ content: 'signup' });
 });
 
 auth.post('/signin', (req, res, next) => {
-  res.send('signin');
+  res.send({ content: 'signin' });
 });
 
 auth.post('/signout', (req, res, next) => {
-  res.send('signout');
+  res.send({ content: 'signout' });
 });
 
 export default auth;

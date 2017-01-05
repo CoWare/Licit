@@ -118,6 +118,7 @@
     "no-delete-var": 1, // disallow deletion of variables
     "no-label-var": 1, // disallow labels that share a name with a variable
     "no-shadow": 1, // disallow declaration of variables already declared in the outer scope
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}],
     "no-shadow-restricted-names": 1, // disallow shadowing of names such as arguments
     "no-undef": 2, // disallow use of undeclared variables unless mentioned in a /*global */ block
     "no-undefined": 0, // disallow use of undefined variable (off by default)

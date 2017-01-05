@@ -82,39 +82,49 @@ Output (always 200)
 #### User
 ```json
 {
-  "name": "John Doe", //unique required
-  "email": "john@doe.org", //unique required
-  "password": "password", //required
-  "_id": "15233", //auto-generated
+  "name": "unique required",
+  "email": "unique required",
+  "password": "required",
+  "_id": "auto-generated",
   "documents": [ 1, 2, 3, 4],
-  "userType": "user", //admin
-  "isActive": true //false
+  "userType": "user",
+  "isActive": true
 }
 ```
 #### Documents
-```
+```json
 {
-    documentName: required,
-    title: required,
-    did: unique required auto-generated,
-    owner: uid,
-    shared: [
-    	{
-            uid,
-            permissions
-        }
-    ],
-    timeCreated: unix time,
-    categories: [cid: 1, 2, 3, 4]
+  "documentName": "required",
+  "title": "required",
+  "_id": "unique required auto-generated",
+  "owner": "uid",
+  "shared": [
+    {
+      "uid": "uid",
+      "permissions": ["read"]
+    }
+  ],
+  "timeCreated": "unix time",
+  "categories": [1, 2, 3, 4]
+}
+```
+#### Templates
+```json
+{
+  "templateName": "required",
+  "title": "required",
+  "_id": "unique required auto-generated",
+  "timeCreated": "unix time",
+  "categories": [1, 2, 3, 4]
 }
 ```
 #### Categories
-```
+```json
 {
-    categoryName: required,
-    cid: unique auto-generated,
-    did: [did: 1, 2, 3, 4],
-    timeCreated: unix time
+  "categoryName": "required",
+  "_id": "unique auto-generated",
+  "did": [ 1, 2, 3, 4],
+  "timeCreated": "unix time"
 }
 ```
 
@@ -122,8 +132,8 @@ Output (always 200)
 All errors must be in the format
 ```json
 {
-  "error": "detailed error message", // e.g validation failed for field 'email'
-  "message": "error synopsis", // e.g validation error
-  "status": 404 //Or a more appropriate error code
+  "error": "validation failed for field 'email'",
+  "message": "validation error",
+  "status": 404
 }
 ```

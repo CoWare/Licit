@@ -1,9 +1,10 @@
+licit api.md
 .idea/
 # Logs
 logs
 *.log
 npm-debug.log*
-
+.env
 # Runtime data
 pids
 *.pid

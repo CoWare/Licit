@@ -101,11 +101,11 @@ Output (always 200)
   "shared": [
     {
       "uid": "uid",
-      "permissions": ["read"]
+      "permissions": ["read", "write"]
     }
   ],
   "timeCreated": "unix time",
-  "categories": [1, 2, 3, 4]
+  "templateId": "1234"
 }
 ```
 #### Templates

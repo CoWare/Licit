@@ -6,7 +6,7 @@ const api = supertest(app);
 
 describe('User Auth Tests', () => {
   it('post should return message for valid route', (done) => {
-    api.post('/auth/signup')
+    api.post('/api/v1/auth/signup')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -18,7 +18,7 @@ describe('User Auth Tests', () => {
   });
 
   it('post should return message for valid route', (done) => {
-    api.post('/auth/signin')
+    api.post('/api/v1/auth/signin')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -30,7 +30,7 @@ describe('User Auth Tests', () => {
   });
 
   it('post should return message for valid route', (done) => {
-    api.post('/auth/signout')
+    api.post('/api/v1/auth/signout')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);

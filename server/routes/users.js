@@ -2,6 +2,10 @@ import express from 'express';
 
 const userRoute = express.Router();
 
+userRoute.get('/', (req, res, next) => {
+  res.send({ content: 'get all users' });
+});
+
 userRoute.get('/:uid', (req, res, next) => {
   res.send({ content: 'get single user' });
 });

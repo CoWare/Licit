@@ -6,7 +6,7 @@ const api = supertest(app);
 
 describe('Document Tests', () => {
   it('get docs should return message for valid route', (done) => {
-    api.get('/api/documents')
+    api.get('/api/v1/templates')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -18,7 +18,7 @@ describe('Document Tests', () => {
   });
 
   it('get a doc should return message for valid route', (done) => {
-    api.get('/api/documents/1')
+    api.get('/api/v1/templates/1')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -30,7 +30,7 @@ describe('Document Tests', () => {
   });
 
   it('post should return message for valid route', (done) => {
-    api.post('/api/documents')
+    api.post('/api/v1/templates')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -42,37 +42,13 @@ describe('Document Tests', () => {
   });
 
   it('put should return message for valid route', (done) => {
-    api.put('/api/documents/1')
+    api.put('/api/v1/templates/1')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
         }
         expect(res.body).to.have.property('content');
         expect(res.body.content).to.equal('edit a document');
-        done();
-      });
-  });
-
-  it('get category should return message for valid route', (done) => {
-    api.get('/api/categories')
-      .expect(200).end((err, res) => {
-        if (err) {
-          done(err);
-        }
-        expect(res.body).to.have.property('content');
-        expect(res.body.content).to.equal('get all doc categories');
-        done();
-      });
-  });
-
-  it('get a category should return a message for valid route', (done) => {
-    api.get('/api/categories/1')
-      .expect(200).end((err, res) => {
-        if (err) {
-          done(err);
-        }
-        expect(res.body).to.have.property('content');
-        expect(res.body.content).to.equal('get docs from a particular category');
         done();
       });
   });

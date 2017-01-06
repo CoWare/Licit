@@ -6,7 +6,7 @@ const api = supertest(app);
 
 describe('User Route Tests', () => {
   it('get should return a message for a valid route', (done) => {
-    api.get('/users/1')
+    api.get('/api/v1/users/1')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -18,7 +18,7 @@ describe('User Route Tests', () => {
   });
 
   it('put should return message for a valid route', (done) => {
-    api.put('/users/1')
+    api.put('/api/v1/users/1')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -30,7 +30,7 @@ describe('User Route Tests', () => {
   });
 
   it('get doc route should return message', (done) => {
-    api.get('/users/1/documents')
+    api.get('/api/v1/users/1/documents')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -42,7 +42,7 @@ describe('User Route Tests', () => {
   });
 
   it('get doc with id should retyurn message for valid route', (done) => {
-    api.get('/users/1/documents/1')
+    api.get('/api/v1/users/1/documents/1')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -54,7 +54,7 @@ describe('User Route Tests', () => {
   });
 
   it('post should return message for valid route', (done) => {
-    api.post('/users/1/documents')
+    api.post('/api/v1/users/1/documents')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -66,7 +66,7 @@ describe('User Route Tests', () => {
   });
 
   it('put user doc should return message for valid route', (done) => {
-    api.put('/users/1/documents/1')
+    api.put('/api/v1/users/1/documents/1')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -78,7 +78,7 @@ describe('User Route Tests', () => {
   });
 
   it('delete should return message for valid route', (done) => {
-    api.delete('/users/1/documents/1')
+    api.delete('/api/v1/users/1/documents/1')
       .expect(200).end((err, res) => {
         if (err) {
           done(err);
@@ -89,14 +89,14 @@ describe('User Route Tests', () => {
       });
   });
 
-  it('get should return error for non-existent routes', (done) => {
-    api.get('/users')
-      .expect(404).end((err, res) => {
+  it('get should return message for valid route', (done) => {
+    api.get('/api/v1/users')
+      .expect(200).end((err, res) => {
         if (err) {
           done(err);
         }
-        expect(res.body).to.have.property('error');
-        expect(res.body.error).to.equal('This page does not exist yet.');
+        expect(res.body).to.have.property('content');
+        expect(res.body.content).to.equal('get all users');
         done();
       });
   });

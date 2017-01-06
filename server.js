@@ -10,6 +10,7 @@ import homepage from './server/routes/index.js';
 import authRoute from './server/routes/auth.js';
 import usersRoute from './server/routes/users.js';
 import docsRoute from './server/routes/documents.js';
+import docCategoryRoute from './server/routes/categories.js';
 
 const app = express();
 
@@ -20,9 +21,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
  * Setup route middlewares.
  */
 app.use('/', homepage);
-app.use('/auth', authRoute);
-app.use('/users', usersRoute);
-app.use('/api', docsRoute);
+app.use('/api/v1/auth', authRoute);
+app.use('/api/v1/users', usersRoute);
+app.use('/api/v1/templates', docsRoute);
+app.use('/api/v1/categories', docCategoryRoute);
 
 /**
  * Handle unknown routes
@@ -38,7 +40,11 @@ app.use((req, res) => {
  */
 app.use((err, req, res, next) => {
   Logger.error(`error: ${err.message}`);
-  res.status(err.code || 500).json({ error: err.reason });
+  res.json({
+    error: err.reason || 'Internal server error',
+    message: err.message || 'Internal server error',
+    status: err.code || 500
+  });
   next();
 });
 

@@ -1,37 +1,42 @@
 import express from 'express';
+import UserController from '../controllers/user-controller.js';
 
 const userRoute = express.Router();
 
 userRoute.get('/', (req, res, next) => {
-  res.send({ content: 'get all users' });
+  UserController.getAllUsers(req, res, next);
 });
 
 userRoute.get('/:uid', (req, res, next) => {
-  res.send({ content: 'get single user' });
+  UserController.getOneUser(req, res, next);
 });
 
 userRoute.put('/:uid', (req, res, next) => {
-  res.send({ content: 'edit single user' });
+  UserController.editUser(req, res, next);
+});
+
+userRoute.delete('/:uid', (req, res, next) => {
+  UserController.deleteUser(req, res, next);
 });
 
 userRoute.get('/:uid/documents', (req, res, next) => {
-  res.send({ content: 'get a user\'s documents' });
+  UserController.getUserDocuments(req, res, next);
 });
 
 userRoute.get('/:uid/documents/:did', (req, res, next) => {
-  res.send({ content: 'get a specified document from a specified user' });
+  UserController.getUserDocument(req, res, next);
 });
 
 userRoute.post('/:uid/documents', (req, res, next) => {
-  res.send({ content: 'add a document' });
+  UserController.createDocument(req, res, next);
 });
 
 userRoute.put('/:uid/documents/:did', (req, res, next) => {
-  res.send({ content: 'edit a specified document' });
+  UserController.editUserDocument(req, res, next);
 });
 
 userRoute.delete('/:uid/documents/:did', (req, res, next) => {
-  res.send({ content: 'delete a specified document' });
+  UserController.deleteUserDocument(req, res, next);
 });
 
 export default userRoute;

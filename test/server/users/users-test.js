@@ -17,6 +17,18 @@ describe('User Route Tests', () => {
       });
   });
 
+  it('delete should return a message for valid route', (done) => {
+    api.delete('/api/v1/users/1')
+      .expect(200).end((err, res) => {
+        if (err) {
+          done(err);
+        }
+        expect(res.body).to.have.property('content');
+        expect(res.body.content).to.equal('deletes a user');
+        done();
+      });
+  });
+
   it('put should return message for a valid route', (done) => {
     api.put('/api/v1/users/1')
       .expect(200).end((err, res) => {

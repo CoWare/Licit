@@ -16,4 +16,16 @@ describe('Home page Tests', () => {
         done();
       });
   });
+
+  it('Should return an error for invalid route', (done) => {
+    api.get('/not/a/route')
+      .expect(404).end((err, res) => {
+        if (err) {
+          done(err);
+        }
+        expect(res.body).to.have.property('error');
+        expect(res.body.error).to.equal('This page does not exist yet.');
+        done();
+      });
+  });
 });

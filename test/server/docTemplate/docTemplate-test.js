@@ -4,7 +4,7 @@ import app from '../../../server.js';
 
 const api = supertest(app);
 
-describe('Document Tests', () => {
+describe('Template Tests', () => {
   it('get docs should return message for valid route', (done) => {
     api.get('/api/v1/templates')
       .expect(200).end((err, res) => {
@@ -12,7 +12,7 @@ describe('Document Tests', () => {
           done(err);
         }
         expect(res.body).to.have.property('content');
-        expect(res.body.content).to.equal('get all documents');
+        expect(res.body.content).to.equal('get all templates');
         done();
       });
   });
@@ -24,7 +24,7 @@ describe('Document Tests', () => {
           done(err);
         }
         expect(res.body).to.have.property('content');
-        expect(res.body.content).to.equal('get aparticulatr document');
+        expect(res.body.content).to.equal('get a particulatr template');
         done();
       });
   });
@@ -36,7 +36,7 @@ describe('Document Tests', () => {
           done(err);
         }
         expect(res.body).to.have.property('content');
-        expect(res.body.content).to.equal('add a document');
+        expect(res.body.content).to.equal('add a template');
         done();
       });
   });
@@ -48,7 +48,19 @@ describe('Document Tests', () => {
           done(err);
         }
         expect(res.body).to.have.property('content');
-        expect(res.body.content).to.equal('edit a document');
+        expect(res.body.content).to.equal('edit a template');
+        done();
+      });
+  });
+
+  it('delete should return message for valid route', (done) => {
+    api.delete('/api/v1/templates/1')
+      .expect(200).end((err, res) => {
+        if (err) {
+          done(err);
+        }
+        expect(res.body).to.have.property('content');
+        expect(res.body.content).to.equal('delete a template');
         done();
       });
   });

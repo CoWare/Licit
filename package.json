@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "gulp lint",
     "test": "babel-node ./node_modules/.bin/_mocha",
-    "cover": "rm -rf coverage/ && babel-node ./node_modules/babel-istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
+    "cover": "rm -rf coverage/ && babel-node ./node_modules/babel-istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "commitmsg": "babel-node commitValidator.js commit && npm run lint",
     "start": "babel-node server.js"
@@ -33,6 +33,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^3.0.1",
+    "mongoose": "^4.7.6",
     "tracer": "^0.8.7"
   },
   "devDependencies": {

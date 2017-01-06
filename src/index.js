@@ -1,7 +1,16 @@
+/**
+ * Index
+ *
+ * A dummy class written for testin purpose
+ */
 class Index {
-    constructor() {
-        this.value = true;
-    }
+
+  /**
+   * The class constructor
+   */
+  constructor() {
+    this.value = true;
+  }
 }
 
-module.exports = Index;
+export default Index;

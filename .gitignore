@@ -1,10 +1,11 @@
-licit api.md
+# Jetbrains Project Folder
 .idea/
+
 # Logs
 logs
 *.log
 npm-debug.log*
-.env
+
 # Runtime data
 pids
 *.pid

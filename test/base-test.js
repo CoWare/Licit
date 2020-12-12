@@ -1,9 +1,11 @@
-var expect = require("expect.js");
-var Index = require("../src/index.js")
-var index = new Index();
+import { expect } from 'chai';
+import Index from '../src/index.js';
 
-describe("Base test", function() {
-  it("should always pass this test", function() {
-    expect(index.value).to.be(true);
+const index = new Index();
+
+describe('Base test', () => {
+  it('should always pass this test', (done) => {
+    expect(index.value).to.be.true;
+    done();
   });
 });
